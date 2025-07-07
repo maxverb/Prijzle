@@ -1,0 +1,52 @@
+{
+  "game-1": {
+    "name": "AH Scharrel kipfilet, 800 g",
+    "price": "€9.49",
+    "image": "https://static.ah.nl/dam/product/AHI_4354523130303937373135?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+  "game-2": {
+    "name": "AH Biologisch Belegen 50+ stuk ca. 405 g",
+    "price": "€7.77",
+    "image": "https://static.ah.nl/dam/product/AHI_4354523130303132313333?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+  "game-3": {
+    "name": "AH Extra lang lekker tijger bruin heel",
+    "price": "€1.29",
+    "image": "https://static.ah.nl/dam/product/AHI_4354523130313932303935?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+  "game-4": {
+    "name": "Aquafresh Freshmint 3-in-1 bescherming tandpasta 75 ml",
+    "price": "€1.45",
+    "image": "https://static.ah.nl/dam/product/AHI_4354523130313135333730?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+  "game-5": {
+    "name": "AH Cola regular 1,5 liter",
+    "price": "€1.19",
+    "image": "https://static.ah.nl/dam/product/AHI_4354523130313436303432?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+  "game-6": {
+    "name": "Edet Ultra smart 4-laags toiletpapier 4 rollen",
+    "price": "€4.99",
+    "image": "https://static.ah.nl/dam/product/AHI_4354523130313830313235?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+  "game-7": {
+    "name": "Heineken Premium pilsener 6-pack 6 x 0,33",
+    "price": "€6.65",
+    "image": "https://static.ah.nl/dam/product/AHI_4354523130313332303134?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+  "game-8": {
+    "name": "Douwe Egberts Aroma rood snelfiltermaling 500 g",
+    "price": "€8.99",
+    "image": "https://static.ah.nl/dam/product/AHI_43545239373932323038?revLabel=3&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+  "game-9": {
+    "name": "Remia Satésaus kant & klaar 325 g",
+    "price": "€2.15",
+    "image": "https://static.ah.nl/dam/product/AHI_4354523130313437373132?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  },
+   "game-10": {
+    "name": "Calvé Pindakaas pot350 g",
+    "price": "€3.49",
+    "image": "https://static.ah.nl/dam/product/AHI_43545239393932303536?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary"
+  }
+}

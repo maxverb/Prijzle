@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIJZLE</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-J8Q97VV1GQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-J8Q97VV1GQ");
+    </script>
+
+    <!-- Favicon Configuration -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/public/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/public/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#dcdcdc" />
+    <meta name="msapplication-config" content="/public/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="styles/game.css" />
+    <link rel="stylesheet" href="styles/overlay.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      defer
+    ></script>
+
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/searchBar.js" defer></script>
+  </head>
+
+  <body>
+    <div id="main-page">
+      <header id="site-header">
+        <div id="header-container">
+          <button id="info-button" data-overlay="info-overlay" type="button">
+            ?
+          </button>
+          <h1 id="title" class="title prijzle-red">
+            <center>PRIJZLE</center>
+          </h1>
+          <button id="stat-button" data-overlay="stats-overlay" type="button">
+            <img
+              src="./assets/stat-logo.svg"
+              style="height: 100%; width: 100%"
+            />
+          </button>
+        </div>
+      </header>
+
+      <main id="game-container">
+        <div id="share-toast" class="animate__animated hide">
+          <center>Resultaten gekopieerd naar klembord</center>
+        </div>
+        <div id="info-card" class="animate__animated">
+          <div id="image-container"></div>
+          <div id="product-info"></div>
+        </div>
+        <div id="game-stats"></div>
+        <div id="guesses-container">
+          <div id="warning-toast" class="animate__animated hide">
+            <center>Vul een geldige prijs in ⚠️</center>
+          </div>
+          <div id="1" class="guess-container"></div>
+          <div id="2" class="guess-container"></div>
+          <div id="3" class="guess-container"></div>
+          <div id="4" class="guess-container"></div>
+          <div id="5" class="guess-container"></div>
+          <div id="6" class="guess-container"></div>
+          <div
+            id="input-container"
+            class="guess-container transparent-background"
+          >
+            <div id="text-input-container">
+              <div id="input-label">€</div>
+              <input
+                id="guess-input"
+                type="text"
+                pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+                data-type="currency"
+                placeholder="Enter a guess..."
+              />
+            </div>
+            <div id="button-container">
+              <button id="guess-button" class="active">GOK</button>
+            </div>
+          </div>
+        </div>
+        <div id="info-overlay" class="overlay" style="display: none">
+          <div id="info-body" class="overlay-body">
+            <div class="info-section">
+              <h3><u>Het spel</u></h3>
+              <p>
+                Gok de <span class="prijzle-red">Prijs</span
+                > van het product in zes keer.
+              </p>
+              <br />
+              <ul style="list-style-type: square">
+                <li>Elke gok moet een geldige prijs zijn.</li>
+                <br /><li>
+                  Elke verkeerde gok brengt je dichter bij de juiste prijs.
+                </li>
+              </ul>
+              <br />
+              <p>Raad je binnen 5% van de juiste prijs? Dan win je!</p>
+              <br />
+              <p>
+                Elke dag  verschijnt er een nieuwe <span class="prijzle-red">PRIJZLE</span
+                >
+              </p>
+            </div>
+            <div class="info-section">
+              <h3><u>Voorbeelden:</u></h3>
+              <div class="guess-container transparent-background">
+                <div class="guess-value-container animate__flipInX">€10.00</div>
+                <div
+                  class="guess-direction-container animate__flipInX guess-far"
+                >
+                  &uarr;
+                </div>
+              </div>
+              <p>
+                Eerste gok van €10,00 ligt meer dan 25% onder de juiste prijs.
+              </p>
+              <br />
+              <div class="guess-container transparent-background">
+                <div class="guess-value-container animate__flipInX">€18.00</div>
+                <div
+                  class="guess-direction-container animate__flipInX guess-near"
+                >
+                  &darr;
+                </div>
+              </div>
+              <p>
+                Volgende gok van €18,00 is te hoog, maar zit binnen 25% van de juiste prijs.
+              </p>
+              <br />
+              <div class="guess-container transparent-background">
+                <div class="guess-value-container animate__flipInX">€16.00</div>
+                <div
+                  class="guess-direction-container animate__flipInX guess-win"
+                >
+                  &check;
+                </div>
+              </div>
+              <p>
+                Je gok van €16,00 zat binnen 5% van de juiste prijs! Je hebt gewonnen!
+              </p>
+            </div>
+            <div class="info-section">
+              <p>
+                If you would like to support my work, you can
+                <a
+                  href="https://www.buymeacoffee.com/kerm"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                  >buy me a coffee!<span style="font-size: 14px">☕</span></a
+                >
+              </p>
+            </div>
+            <div class="info-section">
+              <p>
+                Source code op mijn GitHub !pas alles hier nog aan!
+                <a
+                  href="https://github.com/KermWasTaken"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                  >GitHub</a
+                >!
+              </p>
+              <p>
+                Suggestions? Find a bug?
+                <a href="mailto: costcodle@gmail.com">Let me know!</a>
+              </p>
+            </div>
+            <div class="info-section">
+              <p>
+                Special dank aan
+                <a
+                  href="https://oec.world/en/tradle/"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                >
+                  COSTCODLE
+                en
+                <a
+                  href="https://www.nytimes.com/games/wordle/index.html"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                  >Wordle</a
+                >
+                voor de inspiratie en code!
+              </p>
+              <br />
+              <p>And thank you for checking out my game!</p>
+            </div>
+            <div style="margin-top: 8px">
+              <p>
+                Gemaakt door:!! Alles hier nog aanpassen
+                <a
+                  href="https://github.com/KermWasTaken"
+                  target="_blank"
+                  noreferrer="noopener noreferrer"
+                  >@Kerm</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="stats-overlay" class="overlay" style="display: none">
+          <div id="stat-body" class="overlay-body">
+            <p id="statistics-title">STATISTICS</p>
+            <div id="statistics">
+              <div class="statistic">
+                <div id="number-wins" class="stat"></div>
+                <div class="descriptor">Played</div>
+              </div>
+              <div class="statistic">
+                <div id="win-percent" class="stat"></div>
+                <div class="descriptor">Win %</div>
+              </div>
+              <div class="statistic">
+                <div id="current-streak" class="stat"></div>
+                <div class="descriptor">
+                  <center>Current<br />Streak</center>
+                </div>
+              </div>
+              <div class="statistic">
+                <div id="max-streak" class="stat"></div>
+                <div class="descriptor">
+                  <center>Max<br />Streak</center>
+                </div>
+              </div>
+            </div>
+            <p>GUESS DISTRIBUTION</p>
+            <div class="graph">
+              <div class="graph-row">
+                <div class="graph-label">1</div>
+                <div id="graph-1" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">2</div>
+                <div id="graph-2" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">3</div>
+                <div id="graph-3" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">4</div>
+                <div id="graph-4" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">5</div>
+                <div id="graph-5" class="graphElem"></div>
+              </div>
+              <div class="graph-row">
+                <div class="graph-label">6</div>
+                <div id="graph-6" class="graphElem"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer id="site-footer">
+
+        <div id="database-link">
+         <P>De prijzen komen van</P> <a
+            href="https://www.ah.nl/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >ah.nl</a
+          ><p>en zijn van juli 2025.</p>
+        </div>
+        <div id="dev-name">&copy;Kerm</div>
+      </footer>
+    </div>
+  </body>
+</html>
