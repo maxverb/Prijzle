@@ -17,7 +17,7 @@ let warningTimeout;
 */
 
 //The day Costcodle was launched. Used to find game number each day
-const costcodleStartDate = new Date("06/30/2025");
+const costcodleStartDate = new Date("07/08/2025");
 const gameNumber = getGameNumber();
 
 //Elements with event listeners to play the game
@@ -202,7 +202,7 @@ function handleInput() {
 }
 
 function copyStats() {
-  let output = `Costcodle #${gameNumber}`;
+  let output = `PRIJZLE #${gameNumber}`;
   if (!gameState.hasWon) {
     output += ` X/6\n`;
   } else {
@@ -423,7 +423,7 @@ function switchState(event) {
   }
 
   if (overlayElem.style.display === "flex") {
-    title.innerHTML = `COSTCO<span class="costco-blue">DLE</span>`;
+    title.innerHTML = `<span class="costco-red">PRIJZLE</span>`;
     overlayElem.style.display = "none";
     return;
   }
@@ -437,7 +437,7 @@ function switchState(event) {
   }
 
   function renderInfo() {
-    title.innerHTML = `HOW TO <span class="costco-blue">PLAY</span>`;
+    title.innerHTML = `<span class="costco-red">HOE SPEEL JE </span>`;
     if (!title.classList.contains("info-title")) {
       title.classList.add("info-title");
     }
@@ -445,7 +445,7 @@ function switchState(event) {
   }
 
   function renderStats() {
-    title.innerHTML = `GAME <span class="costco-blue">STATS</span>`;
+    title.innerHTML = `<span class="costco-red">Statistieken</span>`;
 
     renderStatistics();
     graphDistribution();
