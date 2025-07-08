@@ -141,7 +141,7 @@ function updateGameBoard() {
 function updateGuessStat() {
   const guessStats = document.getElementById("game-stats");
   if (gameState.hasWon) {
-    guessStats.innerHTML = `<center>Gefeliciteed! Je hebt gewonnen🎉</center>`;
+    guessStats.innerHTML = `<center>Gefeliciteerd! Je hebt gewonnen🎉</center>`;
     guessStats.innerHTML += `<center>De prijs was €${productPrice}</center>`;
     return;
   }
@@ -437,7 +437,7 @@ function switchState(event) {
   }
 
   function renderInfo() {
-    title.innerHTML = `<span class="costco-red">HOE SPEEL JE </span>`;
+    title.innerHTML = `<span class="costco-red">HANDLEIDING</span>`;
     if (!title.classList.contains("info-title")) {
       title.classList.add("info-title");
     }
@@ -445,7 +445,7 @@ function switchState(event) {
   }
 
   function renderStats() {
-    title.innerHTML = `<span class="costco-red">Statistieken</span>`;
+    title.innerHTML = `<span class="costco-red">STATS</span>`;
 
     renderStatistics();
     graphDistribution();
