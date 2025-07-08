@@ -250,7 +250,7 @@ function copyStats() {
         .share({
           title: "PRIJZLE",
           text: output,
-          url: "https://prijzle.nl",
+          url: "https://www.prijzle.nl",
         })
         .catch((error) => console.error("Share failed:", error));
     }
