@@ -132,11 +132,11 @@
 }
 
 .guess-win {
-  background-color: rgb(243, 101, 35);
+  background-color: rgb(59, 243, 35);
 }
 
 .guess-near {
-  background-color: rgb(255, 196, 37);
+  background-color: rgb(206, 103, 19);
 }
 
 .guess-far {
