@@ -252,7 +252,7 @@ function copyStats() {
           text: output,
           url: "https://www.prijzle.nl",
         })
-        .catch((error) => console.error("Share failed:", error));
+        .catch((error) => console.error("Delen niet gelukt:", error));
     }
   } else {
     output += `https://prijzle.nl`;
